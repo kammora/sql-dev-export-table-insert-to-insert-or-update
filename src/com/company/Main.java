@@ -20,8 +20,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Stream<Path> files = Files.walk(Paths.get("input")).filter(Files::isRegularFile);
-        if(args.length > 1) {
-            pKey[0] = args[1];
+        if(args.length >= 1) {
+            pKey[0] = args[0];
+            System.out.println(pKey[0]);
         } else {
             pKey[0] = null;
         }
